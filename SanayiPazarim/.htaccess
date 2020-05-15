@@ -1,0 +1,17 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+
+
+
+
+RewriteRule ^urundetay-([0-9]+)  urun-detay.php?detay=$1 [L,QSA]
+RewriteRule ^urunler-([0-9a-zA-Z-_]+)  urunler.php?urun=$1 [L,QSA]
+RewriteRule ^Anasayfa$  index.php [L,QSA]
+RewriteRule ^giris$  giris.php [L,QSA]
+RewriteRule ^uyelik$  kayit-ol.php [L,QSA]
+RewriteRule ^urunler$  urunler.php [L,QSA]
+
